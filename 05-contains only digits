@@ -1,0 +1,8 @@
+# take a string from the user and check contains only digits or not?
+
+strng = input("enter a string value : ")
+
+if strng.isdigit():    
+  print ("entered value", strng, " has only digits")
+else:    
+  print("entered value ", strng, "does not have only digits")

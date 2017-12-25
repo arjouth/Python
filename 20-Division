@@ -1,0 +1,10 @@
+#Take two numbers from the user a,b check whether a is divisible by b or not?
+
+
+a = int(input("enter value of a : "))
+b = int(input("enter value of b : "))
+
+if a % b == 0:
+    print (a, " is divisible by ", b)
+else:
+    print (a, " is not divisible by ", b)

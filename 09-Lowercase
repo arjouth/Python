@@ -1,0 +1,9 @@
+# take a string from the user and check contains only  small letters or not?
+
+
+low = input ("enter a word in lower case: ")
+
+if low.islower():
+    print (low, " has all letters in lowercase")
+else:
+    print(low, "does not have all lowere case, plesae reenter the word in lower case")

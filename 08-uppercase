@@ -1,0 +1,8 @@
+# take a string from the user and check contains only  capital letters or not?
+
+cap = input ("enter a word : ")
+
+if cap.isupper():
+    print (cap, "has all capital letters")
+else:
+    print(cap, "does not have all captail letters please renter all captail letters")

@@ -1,0 +1,22 @@
+#1 Take the input from the user for(Total number of people, toatl number of busses, Number of seats for bus).
+# Based on the input decide whether there is sufficient buses or not and give solution for how many extra buses required.
+
+
+people = int (input (" Please enter number of people traveling : "))
+buses = int(input(" please enter numbner of busses booked : "))
+seats = int(input(" please enter number of seats available in a bus: "))
+
+
+capacity = seats * buses
+
+req = people - capacity
+
+need = int(req/seats)
+
+if people <= capacity:
+    print ("there are sufficient buses to accommodate the total people traveling")
+else:
+    print ("there are not enough buses, we need another", need, "buses to accommodate all the people" )
+
+
+

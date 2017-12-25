@@ -1,0 +1,8 @@
+# Print the first 100 odd numbers
+
+
+odd = range(1,100)
+
+for i in odd:
+    if i%2 != 0:
+        print (i)

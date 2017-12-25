@@ -1,0 +1,22 @@
+# Given an age, figure out whether someone's a baby, toddler, child, teenager, adult or old codger.
+
+
+name = input("enter the name of the person : ")
+age = int (input("enter the age of the person : "))
+
+if age <= 2:
+    print (name, "is a baby")
+elif (age > 2) & (age <= 5):
+    print (name, "is a toddler")
+elif (age > 5) & (age <= 12):
+    print (name, "is a child")
+elif (age > 12) & (age <= 19):
+    print (name, " is a teenager")
+elif (age > 19) & (age <= 45):
+    print (name, " is a adult")
+elif (age > 45):
+    print (name, " is a old person")
+else:
+    print ("enter the correct age details")
+
+

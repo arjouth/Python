@@ -1,0 +1,7 @@
+# Find the sum of all the multiples of 3 or 5 below 1000
+
+
+def div(below, *divisors):
+    return (n for n in range(below) if 0 in (n % d for d in divisors))
+
+print (sum(div(1000, 3, 5)))

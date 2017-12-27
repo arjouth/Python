@@ -1,0 +1,22 @@
+# Take some single digit numbers from the user and find out min, maximum, sum, average
+
+num = input("enter multiple numbers by giving space in between : ")
+
+num_list=[]
+
+try:
+    for i in num.split():
+        num_list.append(int(i))
+except Exception as e:
+    print("error: {}\n".format(e))
+
+finally:
+    a = sum(num_list)
+    print(a,"is the sum of the given numbers")
+    b=min(num_list)
+    print(b, "is the smallest number in teh given digits")
+    c= max(num_list)
+    print(c, "is the biggest number in teh given digits")
+    d = sum(num_list)//max(len(num_list),1)
+    print(float(d), "id the average of the given numbers")
+    print (num_list, " is the given list of numbers")

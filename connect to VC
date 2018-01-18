@@ -1,0 +1,28 @@
+from pyVim.connect import SmartConnect, Disconnect
+import ssl
+ 
+s = ssl.SSLContext(ssl.PROTOCOL_TLSv1)
+s.verify_mode = ssl.CERT_NONE
+ 
+try:
+    c = SmartConnect(host="", user="", pwd='')
+    print('Valid certificate')
+except:
+    c = SmartConnect(host="", user="", pwd='', sslContext=s)
+    print('Invalid or untrusted certificate')
+
+datacenter = c.content.rootFolder.childEntity[0]
+vms = datacenter.vmFolder.childEntity
+datastores = datacenter.datastoreFolder.childEntity
+dc = datacenter.hostFolder.childEntity
+
+for i in vms:
+    print("vm name :", i.name)
+
+for a in datastores:
+    print("datastore name : ", a.name)
+
+for b in dc:
+    print ("Cluster : ", b.name)
+
+Disconnect(c)
